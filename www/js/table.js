@@ -13,18 +13,18 @@ var deleteTable = function(){
 
 var addTableData = function(){   
     console.log('adding table')
-    thead = d3.select('thead') 
-    columns = ['datetime','city', 'country', 'shape', 'durationMinutes', 'comments']
+    var thead = d3.select('thead') 
+    var columns = ['datetime','city', 'country', 'shape', 'durationMinutes', 'comments']
 
-    thead.append("tr")
-    .selectAll("th")
-    .data(columns)
-    .enter()
-    .append("th")
-    .text(function(column) { return column; });
+    // thead.append("tr")
+    // .selectAll("th")
+    // .data(columns)
+    // .enter()
+    // .append("th")
+    // .text(function(column) { return column; });
 
     // create a row for each object in the data
-    var rows = thead.selectAll("tr")
+    var rows = d3.select('tbody').selectAll("tr")
     .data(dataSet)
     .enter()
     .append("tr");
