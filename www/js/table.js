@@ -32,9 +32,9 @@ var addTableData = function(){
     // create a cell in each row for each column
     var cells = rows.selectAll("td")
     .data(function(row) {
-        return columns.map(function(column) {
+        return columns.map(function(c) {
             console.log(row[column])
-            return {column: column, value: row[column]};
+            return {column: c, value: row[c]};
         });
     })
     .enter()
