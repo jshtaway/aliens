@@ -11,27 +11,32 @@
   <script src='Data/data.js'></script>
   <script src='js/table.js'></script>
 </head>
-<body>
+  <body onload="addTableData()">
+    <div class = 'jumbotron border-blue'>
+      <div class='row col-xs-12' style="padding-left: 50px">
+        <h2>Aliens are Real.</h2>
+        <p class=''>Here's Proof</p> 
+        <p>To search data, type a date, country, state, etc.</p> 
+      </div>
+      <div class="row" style="padding-left: 50px">
+        <form class="row  form-inline my-2 my-lg-0 " >
+          <input id='inputbox' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="date">
+          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" name='date' onclick="addTableData()" type="button" >Search</button>
+        </form>
+        <!-- <form class = '' >
+          <select class="limitSelector pagesize">
+              <option selected="selected"  value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option  value="40">40</option>
+          </select>
+        </form> -->
+      </div>
+    </div>
+    <div class="container">           
+      <table class="table table-striped" id="alientable">
+      </table>
+    </div>
 
-<div class="container">
-  <h2>Aliens are Real.</h2>
-  <p>Here's Proof</p>            
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <!-- <th>Datetime</th>
-        <th>City</th>
-        <th>state</th>
-        <th>shape</th>
-        <th>durationMinutes</th>
-        <th>comments</th> -->
-      </tr>
-    </thead>
-    <tbody>
-      
-    </tbody>
-  </table>
-</div>
-
-</body>
+  </body>
 </html>
